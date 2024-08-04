@@ -1,0 +1,338 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    transition: margin-left 0.3s;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#toggle-sidebar {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#toggle-sidebar:hover {
+    background-color: #0056b3;
+}
+
+#sidebar {
+    width: 250px;
+    background: #f4f4f4;
+    border-right: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+}
+
+#sidebar.open {
+    transform: translateX(0);
+}
+
+#close-sidebar {
+    background: #ff4d4d;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 50%;
+    padding: 5px 10px;
+}
+
+#close-sidebar:hover {
+    background-color: #cc0000;
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#sidebar li {
+    margin-bottom: 10px;
+}
+
+#sidebar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+#sidebar a:hover {
+    color: #007bff;
+}
+
+#content {
+    flex: 1;
+    padding: 20px;
+    margin-left: 0; /* Adjust margin when sidebar is open */
+    transition: margin-left 0.3s;
+}
+
+button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+li:hover {
+    background-color: #e9ecef;
+}
+
+input[type="file"] {
+    margin-top: 10px;
+}
+
+/* Add these styles to your existing styles.css */
+#file-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#file-list li {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+#file-list img, #file-list video {
+    max-width: 100px;
+    max-height: 100px;
+    margin-right: 10px;
+}
+
+/* Add these styles to your existing styles.css */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    max-width: 90%;
+    max-height: 90%;
+    position: relative;
+}
+
+.modal-content img, .modal-content video {
+    width: 100%;
+    height: auto;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #ff4d4d;
+}
+
+.full-screen {
+    width: 100vw;
+    height: 100vh;
+}
+
+.half-screen {
+    width: 50vw;
+    height: 50vh;
+}
+
+/* Add these styles to your existing styles.css */
+
+/* General Styles for Download Files Page */
+#download-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#download-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#download-list li a {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#download-list li a:hover {
+    text-decoration: underline;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    max-width: 90%;
+    max-height: 90%;
+    position: relative;
+}
+
+.modal-content img, .modal-content video {
+    width: 100%;
+    height: auto;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #ff4d4d;
+}
+
+.full-screen {
+    width: 100vw;
+    height: 100vh;
+}
+
+.half-screen {
+    width: 50vw;
+    height: 50vh;
+}
+
+/* Add these styles to your existing styles.css */
+
+/* Sidebar Styles */
+#sidebar {
+    height: 100%;
+    width: 250px; /* Width of the sidebar */
+    position: fixed;
+    top: 0;
+    left: -250px; /* Initially hidden */
+    background-color: #333;
+    color: white;
+    overflow-x: hidden;
+    transition: 0.3s;
+    z-index: 1;
+    padding-top: 60px;
+}
+
+#sidebar.open {
+    left: 0; /* Show the sidebar */
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#sidebar ul li {
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+#sidebar ul li a:hover {
+    background-color: #575757;
+}
+
+#toggle-sidebar {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#close-sidebar {
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: white;
+}
+
+#content {
+    transition: margin-left 0.3s;
+    padding: 20px;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Files</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <button id="toggle-sidebar">☰</button>
+        <h1>Download Files</h1>
+        <button id="logout">Logout</button>
+    </header>
+    <main>
+        <nav id="sidebar">
+            <button id="close-sidebar">×</button>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Folders.html">Folders</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="download_files.html">Download Files</a></li>
+            </ul>
+        </nav>
+        <section id="content">
+            <h2>Available Files for Download</h2>
+            <ul id="download-list"></ul>
+        </section>
+    </main>
+
+    <!-- Modal for file preview -->
+    <div id="modal" class="modal">
+        <span id="close-modal" class="close">&times;</span>
+        <div id="modal-content" class="modal-content">
+            <!-- Image or video will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <script src="download_script.js"></script>
+    <script src="sidebar.js"></script>
+</body>
+</html>

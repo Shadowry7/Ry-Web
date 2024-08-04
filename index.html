@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Manager</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <button id="toggle-sidebar">☰</button>
+        <h1>File Manager</h1>
+        <button id="logout">Logout</button>
+    </header>
+    <main>
+        <nav id="sidebar">
+            <button id="close-sidebar">×</button>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Folders.html">Folders</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <section id="content">
+            <!-- Content for each page will be loaded here -->
+            <aside id="categories">
+                <h2>Categories</h2>
+                <ul id="category-list"></ul>
+                <button id="add-category">Add Category</button>
+            </aside>
+            <section id="folders">
+                <h2>Folders</h2>
+                <ul id="folder-list"></ul>
+                <button id="add-folder">Add Folder</button>
+            </section>
+            <section id="files">
+                <h2>Files</h2>
+                <input type="file" id="file-upload" multiple>
+                <ul id="file-list"></ul>
+            </section>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
